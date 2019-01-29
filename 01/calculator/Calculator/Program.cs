@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Calculator
+namespace Calculators
 {
-    class Calculator
+    public class Calculator
     {
         static void Main(string[] args)
         {
