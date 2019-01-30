@@ -2,7 +2,7 @@
 .DS_Store
 
 # VSCode
-.vscode/
+.vscode
 
 # Build files
 bin/
