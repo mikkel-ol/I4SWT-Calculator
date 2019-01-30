@@ -32,9 +32,37 @@ namespace Tests
         [TestCase(0, 0, 0)]
         [TestCase(0, 1, -1)]
         [TestCase(0, -1, 1)]
+        [TestCase(1.5, 2.4, -.9)]
+        [TestCase(-1.15, 1.3, -2.45)]
         public void TestSubtract(double a, double b, double result)
         {
-            Assert.That(result, Is.EqualTo(Calc.Subtract(a, b)));
+            Assert.That(result, Is.EqualTo(Calc.Subtract(a, b)).Within(.1));
+        }
+
+        [TestCase(10, 20, 200)]
+        [TestCase(-2, -4, 8)]
+        [TestCase(-2, 4, -8)]
+        [TestCase(0, 0, 0)]
+        [TestCase(0, 1, 0)]
+        [TestCase(0, -1, 0)]
+        [TestCase(1.5, 2.4, 3.6)]
+        [TestCase(-1.15, 1.3, -1.495)]
+        public void TestMultiply(double a, double b, double result)
+        {
+            Assert.That(result, Is.EqualTo(Calc.Multiply(a, b)).Within(.1));
+        }
+
+        [TestCase(1, 0, 1)]
+        [TestCase(0, 1, 0)]
+        [TestCase(1, 1, 1)]
+        [TestCase(1, 2, 1)]
+        [TestCase(2, 2, 4)]
+        [TestCase(3, 3, 27)]
+        [TestCase(1.5, 2.4, 2.64)]
+        [TestCase(-2, -2 , .25)]
+        public void TestPower(double a, double b, double result)
+        {
+            Assert.That(result, Is.EqualTo(Calc.Power(a, b)).Within(.1));
         }
     }
 }

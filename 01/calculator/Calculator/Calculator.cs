@@ -74,16 +74,7 @@ namespace Calculators
 
         public double Power(double x, double exp)
         {
-            if (exp < 1) return x;
-
-            double temp = 1;
-
-            while (exp > 0) {
-                temp *= x;
-                exp--;
-            }
-
-            return temp;
+            return Math.Pow(x, exp);
         }
     }
 }
