@@ -4,6 +4,8 @@ namespace Calculators
 {
     public class Calculator
     {
+        public Calculator() => Clear();
+
         static void Main(string[] args)
         {
             Calculator Calc = new Calculator();
