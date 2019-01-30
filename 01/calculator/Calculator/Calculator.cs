@@ -4,6 +4,8 @@ namespace Calculators
 {
     public class Calculator
     {
+        public Calculator() => Clear();
+
         static void Main(string[] args)
         {
             Calculator Calc = new Calculator();
@@ -115,5 +117,12 @@ namespace Calculators
         }
 
         public double Accumulator { get; private set; }
+        
+        public void Clear()
+        {
+            Accumulator = 0;
+        }
     }
+
 }
+
