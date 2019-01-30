@@ -3,6 +3,7 @@
 
 # VSCode
 .vscode
+.vs
 
 # Build files
 bin/

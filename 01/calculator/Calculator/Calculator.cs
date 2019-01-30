@@ -76,5 +76,7 @@ namespace Calculators
         {
             return Math.Pow(x, exp);
         }
+
+        public double Accumulator { get; private set; }
     }
 }
