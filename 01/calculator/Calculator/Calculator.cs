@@ -83,9 +83,13 @@ namespace Calculators
             return dividend / divisor;
         }
 
-        public double Accumulator
+        public double Accumulator { get; private set; }
+        
+        public void Clear()
         {
-            get; private set => value = 0;
+            Accumulator = 0;
         }
     }
+
 }
+
