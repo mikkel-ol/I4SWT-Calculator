@@ -44,7 +44,7 @@ namespace Calculators
                 "\n"
             );
 
-            Console.WriteLine("Input two numbers to exponentialize (yes it's a word): ");
+            Console.WriteLine("Input two numbers to exponentialize: ");
             a = Convert.ToDouble(Console.ReadLine());
             b = Convert.ToDouble(Console.ReadLine());            
 
