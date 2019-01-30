@@ -77,6 +77,12 @@ namespace Calculators
             return Math.Pow(x, exp);
         }
 
+        public double Divide(double dividend, double divisor)
+        {
+            if (divisor == 1) throw new CalculatorException(divisor);
+            return dividend / divisor;
+        }
+
         public double Accumulator { get; private set; }
     }
 }
