@@ -57,30 +57,61 @@ namespace Calculators
             );
         }
 
+        // Simple
         public double Add(double a, double b)
         {
             return a + b;
         }
+        // Using Accumulator
+        public double Add(double addend)
+        {
+            return Accumulator += addend;
+        }
 
+        // Simple
         public double Subtract(double a, double b)
         {
             return a - b;
         }
+        // Using Accumulator
+        public double Subtract(double subtractor)
+        {
+            return Accumulator -= subtractor;
+        }
 
+        // Simple
         public double Multiply(double a, double b)
         {
             return a * b;
         }
+        // Using Accumulator
+        public double Multiply(double multiplier)
+        {
+            return Accumulator *= multipler;
+        }
 
+        // Simple
         public double Power(double x, double exp)
         {
             return Math.Pow(x, exp);
         }
+        // Using Accumulator
+        public double Power(double exponent)
+        {
+            return Accumulator = Math.Pow(Accumulator, exponent);
+        }
 
+        // Simple
         public double Divide(double dividend, double divisor)
         {
-            if (divisor == 1) throw new CalculatorException(divisor);
+            if (divisor == 0) throw new CalculatorException(divisor);
             return dividend / divisor;
+        }
+        // Using Accumulator
+        public double Divide(double divisor)
+        {
+            if (divisor == 0) throw new CalculatorException(divisor);
+            return Accumulator / divisor;
         }
 
         public double Accumulator { get; private set; }
