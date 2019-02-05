@@ -83,7 +83,8 @@ namespace Tests
         public void TestAccumulator(double a, double b, double result)
         {
             Calc.Clear();
-            Calc.Add(a, b);
+            Calc.Add(a);
+            Calc.Add(b);
             Assert.That(result, Is.EqualTo(Calc.Add(b)));
         }
 
