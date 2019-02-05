@@ -1,5 +1,5 @@
 # I4SWT
-Git page for Softwaretest course at **Aarhus School of Engineering**.
+Git page for course *Software Test* at **Aarhus School of Engineering**.
 
 ## Language
 
