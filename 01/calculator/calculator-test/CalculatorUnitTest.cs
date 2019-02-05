@@ -5,11 +5,12 @@ namespace Tests
 {
     public class CalculatorUnitTest
     {
+        private Calculator Calc;
 
         [SetUp]
         public void Setup()
         {
-            Calculator Calc = new Calculator();
+            Calc = new Calculator();
         }
 
         [TestCase(10, 20, 30)]
