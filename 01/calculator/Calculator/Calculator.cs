@@ -89,7 +89,7 @@ namespace Calculators
         // Using Accumulator
         public double Multiply(double multiplier)
         {
-            return Accumulator *= multipler;
+            return Accumulator *= multiplier;
         }
 
         // Simple
