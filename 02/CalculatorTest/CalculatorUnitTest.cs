@@ -79,7 +79,7 @@ namespace Tests
         // http://nunit.org/nunitv2/docs/2.6/exceptionAsserts.html
         // alternativt : Assert.Throws<CalculatorException>(() => Calc.Divide(a, b));
 
-        [TestCase(1,2,5, Author ="SHN" ,TestName = "Test50" ,ExpectedResult ="5")]
+        [TestCase(1,2,5, Author ="SHN" ,TestName = "Test50")]
         public void TestAccumulator(double a, double b, double result)
         {
             Calc.Clear();
