@@ -21,6 +21,7 @@ namespace Tests
         [TestCase(0, -1, -1)]
         [TestCase(1.5, 2.4, 3.9)]
         [TestCase(-1.15, 1.3, 0.15)]
+        [TestCase(1,1,2)]
         public void TestAdd(double a, double b, double result)
         {
             Assert.That(result, Is.EqualTo(Calc.Add(a, b)).Within(.1));
