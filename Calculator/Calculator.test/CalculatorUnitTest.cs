@@ -109,5 +109,19 @@ namespace Calculators.test
             Calc.Subtract(b);
             Assert.That(result, Is.EqualTo(Calc.Subtract(b)));
         }
+
+        [TestCase(2, 10, 200, TestName = "Method_Accumulator_Multiply2_Multiply10_Multiply10_Result200")]
+        [TestCase(2, 0, 0, TestName = "Method_Accumulator_Multiply2_Multiply0_Multiply0_Result0")]
+        [TestCase(0, 10, 0, TestName = "Method_Accumulator_Multiply0_Multiply10_Multiply10_Result0")]
+        [TestCase(-2, 10, -200, TestName = "Method_Accumulator_Multiply-2_Multiply10_Multiply10_Result-200")]
+        [TestCase(2, -10, 200, TestName = "Method_Accumulator_Multiply2_Multiply-10_Multiply-10_Result200")]
+        public void TestAccumulatorMultiply(double a, double b, double result)
+        {
+            Calc.Clear();
+            Calc.Add(1);
+            Calc.Multiply(a);
+            Calc.Multiply(b);
+            Assert.That(result, Is.EqualTo(Calc.Multiply(b)));
+        }
     }
 }
