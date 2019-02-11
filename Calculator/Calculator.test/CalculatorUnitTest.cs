@@ -53,6 +53,7 @@ namespace Calculators.test
             Assert.That(result, Is.EqualTo(Calc.Multiply(a, b)).Within(.1));
         }
 
+        [TestCase(0, 0, 1, TestName = "Method_Power_0_in_0_Result_1")]
         [TestCase(1, 0, 1, TestName = "Method_Power_One_in_Zero_Result_One")]
         [TestCase(0, 1, 0, TestName = "Method_Power_Zero_in_One_Result_Zero")]
         [TestCase(1, 1, 1, TestName = "Method_Power_One_in_One_Result_One")]
