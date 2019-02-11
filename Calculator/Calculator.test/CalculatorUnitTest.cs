@@ -67,7 +67,7 @@ namespace Calculators.test
         }
 
         [TestCase(3, 0, Author = "SHN", TestName = "Method_Divide_Pos_by_Zero_Throws_EXCEPTION", Reason ="Throws zero Division")]
-        public void TestDivide(double a, double b)
+        public void TestDivideException(double a, double b)
         {
             Assert.That(() => Calc.Divide(a, b), Throws.TypeOf<CalculatorException>());
         }
