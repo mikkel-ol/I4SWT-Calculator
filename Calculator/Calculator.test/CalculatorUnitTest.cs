@@ -6,7 +6,7 @@ namespace Calculators.test
     public class CalculatorUnitTest
     {
         private Calculator Calc;
-        static Calculator Cal= new Calculator();
+
         public delegate double AccumulateMethod(double param);
 
         [SetUp]
