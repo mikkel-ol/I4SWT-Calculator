@@ -113,7 +113,7 @@ namespace Calculators
         public double Divide(double divisor)
         {
             if (divisor == 0) throw new CalculatorException(divisor);
-            return Accumulator / divisor;
+            return Accumulator = Accumulator / divisor;
         }
 
         public double Accumulator { get; private set; }
