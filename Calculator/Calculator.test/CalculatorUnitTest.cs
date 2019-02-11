@@ -89,7 +89,7 @@ namespace Calculators.test
         [TestCase(1, 2, 5, TestName = "Method_Accumulator_Add1_Add2_Add2_Result_5")]
         [TestCase(0, 0, 0, TestName = "Method_Accumulator_AddZeros")]
         [TestCase(-1, -2, -5, TestName = "Method_Accumulator_Add-1_Add-2_Add-2_Result_-5")]
-        [TestCase(-1, 2, 4, TestName = "Method_Accumulator_Add-1_Add2_Add2_Result_4")]
+        [TestCase(-1, 2, 3, TestName = "Method_Accumulator_Add-1_Add2_Add2_Result_4")]
         public void TestAccumulatorAdd(double a, double b, double result)
         {
             Calc.Clear();
