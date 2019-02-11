@@ -132,7 +132,7 @@ namespace Calculators.test
         [TestCase(2, 0, 1, TestName = "Method_Accumulator_Exp2_Power0_Power0_Result1")]
         [TestCase(0, 0, 1, TestName = "Method_Accumulator_Exp0_Power0_Power0_Result1")]
         [TestCase(-1, 2, 1, TestName = "Method_Accumulator_Exp-1_Power2_Power2_Result1")]
-        [TestCase(-2, 2, -16, TestName = "Method_Accumulator_Exp-2_Power2_Power2_Result-16")]
+        [TestCase(-2, 2, 16, TestName = "Method_Accumulator_Exp-2_Power2_Power2_Result16")]
         [TestCase(2, -2, 16, TestName = "Method_Accumulator_Exp2_Power-2_Power-2_Result16")]
         [TestCase(-2, -2, 16, TestName = "Method_Accumulator_Exp-2_Power-2_Power-2_Result16")]
         public void TestAccumulatorPower(double x, double exp, double result)
