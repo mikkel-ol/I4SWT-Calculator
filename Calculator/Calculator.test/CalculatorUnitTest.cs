@@ -16,15 +16,14 @@ namespace Calculators.test
             Calc = new Calculator();
         }
 
-        [TestCase(10, 20, 30, TestName = "Test1")]
-        [TestCase(-2, -4, -6, TestName = "Test2")]
-        [TestCase(-2, 4, 2, TestName = "Test3")]
-        [TestCase(0, 0, 0, TestName = "Test4")]
-        [TestCase(0, 1, 1, TestName = "Test5")]
-        [TestCase(0, -1, -1, TestName = "Test6")]
-        [TestCase(1.5, 2.4, 3.9, TestName = "Test7")]
-        [TestCase(-1.15, 1.3, 0.15, TestName = "Test8")]
-        [TestCase(1,1,2, TestName = "Test9")]
+        [TestCase(10, 20, 30, TestName = "Method_Add_Positive_Result_Positive")]
+        [TestCase(-2, -4, -6, TestName = "Method_Add_Negative_Result_Negative")]
+        [TestCase(-2, 4, 2, TestName = "Method_Add_PosNeg_Result_Pos")]
+        [TestCase(0, 0, 0, TestName = "Method_Add_Zero_Result_Zero")]
+        [TestCase(0, 1, 1, TestName = "Method_Add_One_to_Zero_Result_One")]
+        [TestCase(0, -1, -1, TestName = "Method_Add_NegOne_to_Zero_Result_NegOne")]
+        [TestCase(1.5, 2.4, 3.9, TestName = "Method_Add_Odd_to_Odd_Result_Odd")]
+        [TestCase(-1.15, 1.3, 0.15, TestName = "Method_Add_NegOdd_to_PosOdd_Result_Odd")]
         public void TestAdd(double a, double b, double result)
         {
             Assert.That(result, Is.EqualTo(Calc.Add(a, b)).Within(.1));
