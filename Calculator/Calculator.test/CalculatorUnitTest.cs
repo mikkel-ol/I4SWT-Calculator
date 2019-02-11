@@ -148,8 +148,8 @@ namespace Calculators.test
         {
             Calc.Clear();
             Calc.Add(a);
-            Calc.Division(b);
-            Assert.That(result, Is.EqualTo(Calc.Division(b)));            
+            Calc.Divide(b);
+            Assert.That(result, Is.EqualTo(Calc.Divide(b)));            
         }
     }
 }
