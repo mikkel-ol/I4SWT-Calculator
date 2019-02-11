@@ -142,5 +142,15 @@ namespace Calculators.test
             Calc.Power(exp);
             Assert.That(result, Is.EqualTo(Calc.Power(exp)));            
         }
+
+        [TestCase(2, 2, .5, TestName = "Method_Accumulator_Divident2_Divide2_Divide2_Result0.5")]
+        [TestCase(2, .5, 8, TestName = "Method_Accumulator_Divident2_Divide0.5_Divide0.5_Result8")]
+        public void TestAccumulatorDivision(double a, double b, double result)
+        {
+            Calc.Clear();
+            Calc.Add(a);
+            Calc.Division(b);
+            Assert.That(result, Is.EqualTo(Calc.Division(b)));            
+        }
     }
 }
