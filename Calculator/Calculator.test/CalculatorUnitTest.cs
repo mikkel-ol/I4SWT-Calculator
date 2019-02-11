@@ -154,9 +154,11 @@ namespace Calculators.test
 
             if (b == 0)
                 Assert.That(() => Calc.Divide(b), Throws.TypeOf<CalculatorException>());
-
-            Calc.Divide(b);
-            Assert.That(result, Is.EqualTo(Calc.Divide(b)));            
+            
+            else {
+                Calc.Divide(b);
+                Assert.That(result, Is.EqualTo(Calc.Divide(b)));     
+            }       
         }
     }
 }
