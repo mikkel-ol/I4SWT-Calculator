@@ -107,7 +107,7 @@ namespace Calculators
         public double Divide(double dividend, double divisor)
         {
             if (divisor == 0) throw new CalculatorException(divisor);
-            return Accumulator = dividend / divisor;
+            return dividend / divisor;
         }
         // Using Accumulator
         public double Divide(double divisor)
