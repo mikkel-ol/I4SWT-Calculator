@@ -86,30 +86,16 @@ namespace Calculators.test
             Assert.That(result, Is.EqualTo(Calc.Divide(a, b)).Within(.1));
         }
 
-
-
-
-<<<<<<< HEAD
-        [TestCase(1,2,5,TestName = "Method_Accumulator_Add1_Add2_Add2_Result_5")]
+        [TestCase(1, 2, 5, TestName = "Method_Accumulator_Add1_Add2_Add2_Result_5")]
+        [TestCase(0, 0, 0, TestName = "Method_Accumulator_AddZeros")]
+        [TestCase(-1, -2, -5, TestName = "Method_Accumulator_Add-1_Add-2_Add-2_Result_-5")]
+        [TestCase(-1, 2, 4, TestName = "Method_Accumulator_Add-1_Add2_Add2_Result_4")]
         public void TestAccumulatorAdd(double a, double b, double result)
-=======
-        [TestCase(1, 2, 5, Author ="SHN" , TestName = "Method_Accumulator_Add1_Add2_Add2_Result_5")]
-        public void TestAccumulator(double a, double b, double result)
->>>>>>> 568abf42a05d2b8ceeb371d81407f07622b1a8f1
         {
             Calc.Clear();
             Calc.Add(a);
             Calc.Add(b);
             Assert.That(result, Is.EqualTo(Calc.Add(b)));
         }
-
-        [TestCase(1, 5, TestName = "Method_Accumulator_Add1_Add2_Add2_Result_5")]
-        public void TestAccumulator(double a ,double result)
-        {
-            Calc.Clear();
-            Calc.Add(2);
-            Assert.That(result, Is.EqualTo(Calc.Add(a)));
-        }
-
     }
 }
