@@ -67,24 +67,17 @@ namespace Calculators.test
             Assert.That(result, Is.EqualTo(Calc.Power(a, b)).Within(.1));
         }
 
-        [TestCase(3, 0, Author = "SHN", TestName = "Method_Divide_Pos_by_Zero_Throws_EXCEPTION", Reason ="Throws zero Division Exception")]
-        public void TestDivideException(double a, double b)
-        {
-            Assert.That(() => Calc.Divide(a, b), Throws.TypeOf<CalculatorException>());
-        }
-        // () => 
-        // is a delegate
-        // http://nunit.org/nunitv2/docs/2.6/exceptionAsserts.html
-        // alternativt : Assert.Throws<CalculatorException>(() => Calc.Divide(a, b));
-
-
         [TestCase(3, 3, 1, TestName = "Method_Divide_3_by_3_Result_1")]
         [TestCase(3, 1, 3, TestName = "Method_Divide_3_by_1_Result_3")]
         [TestCase(3, 1.5, 2, TestName = "Method_Divide_3_by_1.5_Result_2")]
         [TestCase(.1, .1, 1, TestName = "Method_Divide_.1_by_.1_Result_1")]
+        [TestCase(3, 0, Author = "SHN", TestName = "Method_Divide_Pos_by_Zero_Throws_EXCEPTION", Reason ="Throws zero Division Exception")]
         public void TestDivide(double a, double b, double result)
         {
-            Assert.That(result, Is.EqualTo(Calc.Divide(a, b)).Within(.1));
+            if (b == 0)
+                Assert.That(() => Calc.Divide(a, b), Throws.TypeOf<CalculatorException>());
+            else
+                Assert.That(result, Is.EqualTo(Calc.Divide(a, b)).Within(.1));
         }
 
         [TestCase(1, 2, 5, TestName = "Method_Accumulator_Add1_Add2_Add2_Result_5")]
@@ -158,7 +151,7 @@ namespace Calculators.test
             else {
                 Calc.Divide(b);
                 Assert.That(result, Is.EqualTo(Calc.Divide(b)));     
-            }       
+            }
         }
     }
 }
