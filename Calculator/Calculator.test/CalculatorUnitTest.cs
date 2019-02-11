@@ -71,7 +71,7 @@ namespace Calculators.test
         [TestCase(3, 1, 3, TestName = "Method_Divide_3_by_1_Result_3")]
         [TestCase(3, 1.5, 2, TestName = "Method_Divide_3_by_1.5_Result_2")]
         [TestCase(.1, .1, 1, TestName = "Method_Divide_.1_by_.1_Result_1")]
-        [TestCase(3, 0, Author = "SHN", TestName = "Method_Divide_Pos_by_Zero_Throws_EXCEPTION", Reason ="Throws zero Division Exception")]
+        [TestCase(3, 0, null, Author = "SHN", TestName = "Method_Divide_Pos_by_Zero_Throws_EXCEPTION", Reason ="Throws zero Division Exception")]
         public void TestDivide(double a, double b, double result)
         {
             if (b == 0)
