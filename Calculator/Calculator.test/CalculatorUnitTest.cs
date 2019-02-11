@@ -76,7 +76,17 @@ namespace Calculators.test
         // http://nunit.org/nunitv2/docs/2.6/exceptionAsserts.html
         // alternativt : Assert.Throws<CalculatorException>(() => Calc.Divide(a, b));
 
-        [TestCase(1,2,5, Author ="SHN" ,TestName = "Test50")]
+
+        [TestCase(3, 3, 1, TestName = "Method_Divide_3_by_3_Result_1")]
+        public void TestDivide(double a, double b, double result)
+        {
+            Assert.That(result, Is.EqualTo(Calc.Power(a, b)).Within(.1));
+        }
+
+
+
+
+        [TestCase(1,2,5, Author ="SHN" ,TestName = "Method_Accumulator_Add1_Add2_Add2_Result_5")]
         public void TestAccumulator(double a, double b, double result)
         {
             Calc.Clear();
