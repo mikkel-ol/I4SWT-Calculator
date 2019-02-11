@@ -146,7 +146,7 @@ namespace Calculators.test
         [TestCase(2, 2, .5, TestName = "Method_Accumulator_Divident2_Divide2_Divide2_Result0.5")]
         [TestCase(2, .5, 8, TestName = "Method_Accumulator_Divident2_Divide0.5_Divide0.5_Result8")]
         [TestCase(0, 2, 0, TestName = "Method_Accumulator_Divident0_Divide2_Divide2_Result0")]
-        [TestCase(2, 0, TestName = "Method_Accumulator_Divide_Pos_by_Zero_Throws_EXCEPTION", Reason ="Throws zero Division Exception")]
+        [TestCase(2, 0, null, TestName = "Method_Accumulator_Divide_Pos_by_Zero_Throws_EXCEPTION", Reason ="Throws zero Division Exception")]
         public void TestAccumulatorDivision(double a, double b, double result)
         {
             Calc.Clear();
