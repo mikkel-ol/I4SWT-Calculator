@@ -67,7 +67,7 @@ namespace Calculators.test
             Assert.That(result, Is.EqualTo(Calc.Power(a, b)).Within(.1));
         }
 
-        [TestCase(3, 0, Author = "SHN", TestName = "Method_Divide_Pos_by_Zero_Throws_EXCEPTION", Reason ="Throws zero Division")]
+        [TestCase(3, 0, Author = "SHN", TestName = "Method_Divide_Pos_by_Zero_Throws_EXCEPTION", Reason ="Throws zero Division Exception")]
         public void TestDivideException(double a, double b)
         {
             Assert.That(() => Calc.Divide(a, b), Throws.TypeOf<CalculatorException>());
@@ -145,10 +145,16 @@ namespace Calculators.test
 
         [TestCase(2, 2, .5, TestName = "Method_Accumulator_Divident2_Divide2_Divide2_Result0.5")]
         [TestCase(2, .5, 8, TestName = "Method_Accumulator_Divident2_Divide0.5_Divide0.5_Result8")]
+        [TestCase(0, 2, 0, TestName = "Method_Accumulator_Divident0_Divide2_Divide2_Result0")]
+        [TestCase(2, 0, TestName = "Method_Accumulator_Divide_Pos_by_Zero_Throws_EXCEPTION", Reason ="Throws zero Division Exception")]
         public void TestAccumulatorDivision(double a, double b, double result)
         {
             Calc.Clear();
             Calc.Add(a);
+
+            if (b == 0)
+                Assert.That(() => Calc.Divide(b), Throws.TypeOf<CalculatorException>());
+
             Calc.Divide(b);
             Assert.That(result, Is.EqualTo(Calc.Divide(b)));            
         }
