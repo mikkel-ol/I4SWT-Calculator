@@ -97,5 +97,17 @@ namespace Calculators.test
             Calc.Add(b);
             Assert.That(result, Is.EqualTo(Calc.Add(b)));
         }
+
+        [TestCase(1, 2, -5, TestName = "Method_Accumulator_Subtract1_Subtract2_Subtract2_Result_-5")]
+        [TestCase(0, 0, 0, TestName = "Method_Accumulator_SubtractZeros")]
+        [TestCase(-1, -2, 5, TestName = "Method_Accumulator_Subtract-1_Subtract-2_Subtract-2_Result_5")]
+        [TestCase(-1, 2, -3, TestName = "Method_Accumulator_Subtract-1_Subtract2_Subtract2_Result_-3")]
+        public void TestAccumulatorSubtract(double a, double b, double result)
+        {
+            Calc.Clear();
+            Calc.Subtract(a);
+            Calc.Subtract(b);
+            Assert.That(result, Is.EqualTo(Calc.Subtract(b)));
+        }
     }
 }
