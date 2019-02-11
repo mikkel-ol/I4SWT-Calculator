@@ -126,9 +126,10 @@ namespace Calculators.test
 
         [TestCase(1, 2, 1, TestName = "Method_Accumulator_Exp1_Power2_Power2_Result1")]
         [TestCase(2, 1, 2, TestName = "Method_Accumulator_Exp2_Power1_Power1_Result2")]
-        [TestCase(2, 2, 8, TestName = "Method_Accumulator_Exp2_Power2_Power2_Result8")]
+        [TestCase(2, 2, 16, TestName = "Method_Accumulator_Exp2_Power2_Power2_Result16")]
         [TestCase(0, 2, 0, TestName = "Method_Accumulator_Exp0_Power2_Power2_Result0")]
         [TestCase(2, 0, 1, TestName = "Method_Accumulator_Exp2_Power0_Power0_Result1")]
+        [TestCase(0, 0, 1, TestName = "Method_Accumulator_Exp0_Power0_Power0_Result1")]
         public void TestAccumulatorPower(double x, double exp, double result)
         {
             Calc.Clear();
