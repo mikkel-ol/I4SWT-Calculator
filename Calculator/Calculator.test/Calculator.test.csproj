@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C403749C-2D24-46AB-985D-354314AD52DC}</ProjectGuid>
+    <ProjectGuid>{B45D335E-1F22-4901-A3CA-C17E5FE93D47}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Calculator.Test.Unit</RootNamespace>
-    <AssemblyName>Calculator.Test.Unit</AssemblyName>
+    <RootNamespace>Calculator.test</RootNamespace>
+    <AssemblyName>Calculator.test</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -51,13 +51,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Calculator\Calculator.csproj">
-      <Project>{3eaa3196-7410-4887-ac1a-ede7eee773e6}</Project>
-      <Name>Calculator</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\Calculator\Calculator.csproj">
+      <Project>{c634cc4f-09f6-46c6-b839-c86d445d178a}</Project>
+      <Name>Calculator</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

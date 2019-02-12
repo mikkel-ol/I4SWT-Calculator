@@ -12,10 +12,10 @@ namespace Calculators
 
             Console.WriteLine("Input two numbers to add: ");
             double a = Convert.ToDouble(Console.ReadLine());
-            double b = Convert.ToDouble(Console.ReadLine());            
+            double b = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine(
-                "Result: " + 
+                "Result: " +
                 Calc.Add(a, b) +
                 "\n" +
                 "--------------" +
@@ -24,10 +24,10 @@ namespace Calculators
 
             Console.WriteLine("Input two numbers to subtract: ");
             a = Convert.ToDouble(Console.ReadLine());
-            b = Convert.ToDouble(Console.ReadLine());            
+            b = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine(
-                "Result: " + 
+                "Result: " +
                 Calc.Subtract(a, b) +
                 "\n" +
                 "--------------" +
@@ -36,10 +36,10 @@ namespace Calculators
 
             Console.WriteLine("Input two numbers to multiply: ");
             a = Convert.ToDouble(Console.ReadLine());
-            b = Convert.ToDouble(Console.ReadLine());            
+            b = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine(
-                "Result: " + 
+                "Result: " +
                 Calc.Multiply(a, b) +
                 "\n" +
                 "--------------" +
@@ -48,10 +48,10 @@ namespace Calculators
 
             Console.WriteLine("Input two numbers to exponentialize: ");
             a = Convert.ToDouble(Console.ReadLine());
-            b = Convert.ToDouble(Console.ReadLine());            
+            b = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine(
-                "Result: " + 
+                "Result: " +
                 Calc.Power(a, b) +
                 "\n" +
                 "--------------" +
@@ -113,11 +113,11 @@ namespace Calculators
         public double Divide(double divisor)
         {
             if (divisor == 0) throw new CalculatorException(divisor);
-            return Accumulator / divisor;
+            return Accumulator = Accumulator / divisor;
         }
 
         public double Accumulator { get; private set; }
-        
+
         public void Clear()
         {
             Accumulator = 0;
