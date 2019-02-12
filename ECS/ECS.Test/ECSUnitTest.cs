@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
-using ECSSWT;
-
+using ECS;
 //#######################################
 //
 // Microsoft: Using Stubs to isolate parts of your application

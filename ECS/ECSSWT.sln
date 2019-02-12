@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECS", "ECS\ECS.csproj", "{F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECS.Test", "ECS.Test\ECS.Test.csproj", "{E5D82544-E763-4569-A3DB-B309F32FA81C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForMikkel", "TestForMikkel\TestForMikkel.csproj", "{C9EB177A-0AC9-48A3-9998-865DCF22310B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestForMikkel", "TestForMikkel\TestForMikkel.csproj", "{C9EB177A-0AC9-48A3-9998-865DCF22310B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
