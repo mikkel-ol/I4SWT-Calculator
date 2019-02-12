@@ -8,5 +8,8 @@ namespace ECS
 {
     interface IHeater
     {
+        void TurnON();
+        void TurnOff();
+
     }
 }

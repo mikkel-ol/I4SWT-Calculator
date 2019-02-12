@@ -1,12 +1,10 @@
 ﻿using NUnit.Framework;
 using ECSSWT;
 
-
-
 namespace ECS.Test
 {
     [TestFixture]
-    public class Class1
+    public class HeaterTest
     {
         // Objects pref. interfaces
         

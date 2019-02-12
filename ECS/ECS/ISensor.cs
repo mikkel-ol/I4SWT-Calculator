@@ -8,6 +8,6 @@ namespace ECS
 {
     interface ISensor
     {
-
+        int GetSensorData();
     }
 }
