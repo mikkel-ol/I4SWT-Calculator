@@ -23,12 +23,14 @@ class IHeater <<Interface>>
 class FakeTempSensor
 {
     + GetTemp(): int
+    - RunSelfTest(): bool
 }
 
 class FakeHeater
 {
     + TurnOff(): void
     + TurnOn(): void
+    - RunSelfTest(): bool
 }
 
 class TempSensor
