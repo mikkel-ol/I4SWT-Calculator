@@ -21,6 +21,9 @@ namespace ECS.Test
         public void setup()
         {
             // setup Using interfaces
+            ISensor fakeTempSensor = new FakeTempSensor();
+            IHeater fakeHeater = new FakeHeater();
+            ECS uut = new ECS(22, fakeTempSensor, fakeHeater);
 
         }
 
