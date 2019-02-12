@@ -76,6 +76,15 @@ namespace ECS.Unit.Test
 
             Assert.That(isHeaterOn, Is.EqualTo(result));
         }
+
+        [Test]
+        public void RunSelfTest_StubsReturnTrue_ReturnsTrue()
+        {
+            // work is done in setup
+            bool selfTestTrue = uut.RunSelfTest();
+
+            Assert.That(selfTestTrue, Is.EqualTo(true));
+        }
         /* [Random(-1,2,5)]
          * [Values(1,2,3,4,5,)]
          * 
