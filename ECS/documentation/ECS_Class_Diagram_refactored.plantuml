@@ -1,5 +1,4 @@
 @startuml
-skinparam dpi 300
 skinparam monochrome true
 skinparam linetype ortho
 hide circle
@@ -10,6 +9,27 @@ hide <<Domain>> circle'/
 /' i sekvensdiagrammer, brug defines til at skrive
  lange navne '/
 
+class ISensor <<Interface>>
+{
+    GetTemp(): int
+}
+
+class IHeater <<Interface>>
+{
+    TurnOff(): void
+    TurnOn(): void
+}
+
+class FakeTempSensor
+{
+    + GetTemp(): int
+}
+
+class FakeHeater
+{
+    + TurnOff(): void
+    + TurnOn(): void
+}
 
 class TempSensor
 {
@@ -29,7 +49,7 @@ class ECS
     - _threshold: int
     - _tempSensor: TempSensor
     - _heater: Heater
-    + ECS(int thr)
+    + ECS(int thr, IHeater heater, ISensor sensor)
     + Regulate(): void
     + SetThreshold(int thr): void
     + GetThreshold(): int
@@ -37,7 +57,11 @@ class ECS
     - RunSelfTest(): void
 }
 
-ECS *-- Heater
-ECS *-- TempSensor
+ECS *-- IHeater
+ECS *-- ISensor
+IHeater <|.. Heater
+IHeater <|.. FakeHeater
+ISensor <|.. TempSensor
+ISensor <|.. FakeTempSensor
 
 @enduml
