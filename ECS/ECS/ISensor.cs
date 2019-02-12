@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace ECS
 {
-    interface ISensor
+    public interface ISensor
     {
         int GetSensorData();
+        bool RunSelfTest();
     }
 }
