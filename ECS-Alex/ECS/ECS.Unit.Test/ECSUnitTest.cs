@@ -60,6 +60,22 @@ namespace ECS.Unit.Test
 
             Assert.That(currTemp, Is.EqualTo(result));
         }
+
+        [TestCase(-5, true)]
+        [TestCase(15, false)]
+        public void Regulate_TempThresholdIs10_ReturnsCorrectHeatBool(int temp, bool result)
+        {
+
+            FakeTempSensor fakeTempSensor = new FakeTempSensor();
+            FakeHeater fakeHeater = new FakeHeater();
+            uut = new ECS(10, fakeTempSensor, fakeHeater);
+            fakeTempSensor.SetTestTemp(temp);
+
+            uut.Regulate();
+            bool isHeaterOn = fakeHeater.GetTestHeaterIsOnBool();
+
+            Assert.That(isHeaterOn, Is.EqualTo(result));
+        }
         /* [Random(-1,2,5)]
          * [Values(1,2,3,4,5,)]
          * 
