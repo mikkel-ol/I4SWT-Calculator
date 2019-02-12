@@ -64,5 +64,10 @@ namespace Tests
         {
             Assert.That(result, Is.EqualTo(Calc.Power(a, b)).Within(.1));
         }
+
+        public void TestDivide(double a, double b, double result)
+        {
+            Assert.Throws<CalculatorException>(Calc.Divide(a,b));
+        }
     }
 }
