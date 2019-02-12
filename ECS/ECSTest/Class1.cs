@@ -1,12 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NUnit.Framework;
+using ECSSWT;
 
-namespace ECSSWT
+
+
+namespace ECS.Test
 {
     public class Class1
     {
+        // Objects pref. interfaces
+        
+
+        [SetUp] // https://github.com/nunit/docs/wiki/Attributes
+        public void setup()
+        {
+            // setup Using interfaces
+
+        }
+
+
+        []
+
     }
 }
