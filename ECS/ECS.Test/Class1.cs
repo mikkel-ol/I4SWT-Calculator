@@ -1,6 +1,14 @@
 ﻿using NUnit.Framework;
 using ECSSWT;
 
+//#######################################
+//
+// Microsoft: Using Stubs to isolate parts of your application
+// from each other for unit testing
+//
+// https://docs.microsoft.com/en-us/visualstudio/test/using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing?view=vs-2017
+//
+//########################################
 namespace ECS.Test
 {
     [TestFixture]
