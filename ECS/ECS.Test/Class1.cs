@@ -18,7 +18,11 @@ namespace ECS.Test
 
         }
 
-
+        [TestCase(1,2,3,TestName ="CaseOne")]
+        public void TestTest(double a, double b, double result)
+        {
+            Assert.That(result, Is.EqualTo(1 + 2));
+        }
 /* [Random(-1,2,5)]
  * [Values(1,2,3,4,5,)]
  * 
