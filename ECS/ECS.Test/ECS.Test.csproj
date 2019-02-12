@@ -53,6 +53,16 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ECS.Legacy\ECS.Legacy.csproj">
+      <Project>{7bba6d8f-4649-4adb-b90e-94f0fb6554ac}</Project>
+      <Name>ECS.Legacy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ECS\ECS.csproj">
+      <Project>{f77a083b-adb3-4459-ad38-b58ce268dca2}</Project>
+      <Name>ECS</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
