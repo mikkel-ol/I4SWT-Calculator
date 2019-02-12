@@ -12,10 +12,11 @@ using ECSSWT;
 namespace ECS.Test
 {
     [TestFixture]
-    public class HeaterTest
+    public class ECSUnitTest
     {
         // Objects pref. interfaces
-        
+
+        private ECS uut = null;
 
         [SetUp] // https://github.com/nunit/docs/wiki/Attributes
         public void setup()
@@ -23,14 +24,22 @@ namespace ECS.Test
             // setup Using interfaces
             ISensor fakeTempSensor = new FakeTempSensor();
             IHeater fakeHeater = new FakeHeater();
-            ECS uut = new ECS(22, fakeTempSensor, fakeHeater);
+            uut = new ECS(10, fakeTempSensor, fakeHeater);
 
         }
 
-        [TestCase(1,2,3,TestName ="CaseOne")]
+/*        [TestCase(1,2,3,TestName ="CaseOne")]
         public void TestTest(double a, double b, double result)
         {
             Assert.That(result, Is.EqualTo(1 + 2));
+        }*/
+
+        [Test]
+        public void ECS_CtorInSetupThreshold10_Returns10()
+        {
+            // work is done in setup
+
+            Assert.That(uut.GetThreshold(), Is.EqualTo(10));
         }
 /* [Random(-1,2,5)]
  * [Values(1,2,3,4,5,)]

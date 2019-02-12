@@ -47,19 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="FakeHeater.cs" />
-    <Compile Include="FakeTempSensor.cs" />
+    <Compile Include="ECSUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ECS.Legacy\ECS.Legacy.csproj">
-      <Project>{7bba6d8f-4649-4adb-b90e-94f0fb6554ac}</Project>
-      <Name>ECS.Legacy</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ECS\ECS.csproj">
       <Project>{f77a083b-adb3-4459-ad38-b58ce268dca2}</Project>
       <Name>ECS</Name>
