@@ -12,12 +12,14 @@ hide <<Domain>> circle'/
 class ISensor <<Interface>>
 {
     GetTemp(): int
+    RunSelfTest(): bool
 }
 
 class IHeater <<Interface>>
 {
     TurnOff(): void
     TurnOn(): void
+    RunSelfTest(): bool
 }
 
 class FakeTempSensor
