@@ -3,7 +3,7 @@ mono: none
 dotnet: 2.2
 sudo: required
 dist: xenial
-solution: Calculatorsln
+solution: Calculator.sln
 script:
  - dotnet restore
  - dotnet build
